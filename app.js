@@ -175,4 +175,9 @@ ttsBtn.addEventListener("click", () => {
   speechSynthesis.speak(utterance);
 });
 
+const initializeApp = () => {
+  setMethod(methods[0]);
+};
+
 window.addEventListener("beforeunload", stopSpeech);
+window.addEventListener("DOMContentLoaded", initializeApp);
