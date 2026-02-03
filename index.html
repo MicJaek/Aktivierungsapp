@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workshop Aktivierung</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Aktivierungsmethoden für Workshops</h1>
+        <p>
+          Klicke auf den Button für einen kurzen, passenden Vorschlag. Du kannst
+          dir anschließend eine detaillierte Anleitung anzeigen oder vorlesen
+          lassen.
+        </p>
+      </header>
+
+      <section class="card" aria-live="polite">
+        <div class="card__media">
+          <img id="methodImage" alt="Bild zur Aktivierungsmethode" />
+        </div>
+        <div class="card__content">
+          <h2 id="methodTitle">Bereit für den nächsten Energiekick?</h2>
+          <p id="methodShort">
+            Klicke auf „Neue Methode“, um eine kurze Aktivierung für deinen
+            Workshop zu erhalten.
+          </p>
+          <div class="card__actions">
+            <button id="newMethodBtn" class="primary">Neue Methode</button>
+            <button id="detailsBtn" class="secondary" disabled>
+              Anleitung anzeigen
+            </button>
+            <button id="ttsBtn" class="secondary" disabled>
+              Anleitung vorlesen
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="detailsPanel" class="details" hidden>
+        <h3>Schritt-für-Schritt-Anleitung</h3>
+        <ol id="methodSteps"></ol>
+        <p id="methodTip" class="details__tip"></p>
+      </section>
+
+      <footer class="app__footer">
+        <p>
+          Tipp: Die Vorlesefunktion nutzt die integrierte Sprachausgabe deines
+          Browsers.
+        </p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
